@@ -44,4 +44,27 @@ function Game(){
         }
     }
     
+    function Swamp(){
+        var swampEnv = prompt("this is a swamp. /n -follow path. /n -swim across.")
+        
+        if(swampEnv == "follow" || swampEnv == "follow path"){
+            var swampPath = prompt("you head towards a hut in the swamp. /n -enter hut. /n -burn it down")
+            if( swampPath = "enter"){
+                alert("there is a witch by the fire")
+            }
+            
+        else if(swampPath = "burn it down"){
+            alert("you hear screaming form inside you monster that couldve been a homeless orphan child whats wrong with you you werent even gunna check first the heck man")
+        }
+            else if(swampEnv == "swim"){
+        
+            else{
+                    alert("i dont understand "+swampEnv);
+                    Swamp();
+                }
+            }
+        }
+        
+        }
+    
 }
