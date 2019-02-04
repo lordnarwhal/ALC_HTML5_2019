@@ -18,6 +18,22 @@ multiline comment
 
 //confirm("So your name is "+pc);
 
+var inventory = {
+    sword:0,
+    food:0,
+    sheild:0,
+    water:0,
+    map:0,
+    
+}
+
+var enemy = {
+    coins:10,
+    dagger:1,
+    hood:1,
+    
+}
+
 Game();
 
 function Game(){
@@ -62,8 +78,24 @@ function Game(){
                     alert("i dont understand "+swampEnv);
                     Swamp();
                 }
+            function blacksmith(){
+                alert("sup nerd whaat ya want."):
+                
+                    var balcksmith(" /n - buy sword");
+                        if(blacksmith = "buy sword" && inventory.coins >= 100){
+                            var swordBuy = confirm("you sure you wanna buy this bud?");
+                            if(swordBuy){
+                                inventory.sword ++;
+                                alert("you got " +inventory.sword+" swords");
+                                inventory.coins = inventory.coins - 100;
+                                alert("you now have "+inventory.coins+" coins left");
+                                Blacksmith();
+                            }
+                        }
+            }
             }
         }
+        
         
         }
     
