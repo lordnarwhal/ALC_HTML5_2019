@@ -78,6 +78,9 @@ function Game(){
                     alert("i dont understand "+swampEnv);
                     Swamp();
                 }
+            }
+        }
+    }
             function blacksmith(){
                 alert("sup nerd whaat ya want."):
                 
@@ -93,10 +96,38 @@ function Game(){
                             }
                         }
             }
-            }
-        }
+            
         
         
-        }
+        
+        
     
+    
+    Function Castle(){
+        var insideCastle = prompt("- upstairs - sownstairs - courtyard - balcony - look").toLowerCase();
+        
+        switch(insideCastle){
+                case "upstairs" || "go upstairs":
+                var upstairs = prompt("you head to top floor of castle");
+                
+                Castle();
+                break;
+                case "downstairs":
+                    alert("you go downstairs");
+                
+                break;
+                case "courtyard":
+                    alert("you go to the courtyard"):
+                    Castle();
+                break;
+                case "balcony":
+                    alert("you go to balcony");
+                    Castle();
+                break;
+                default:
+                    alert("I dont know what "+insideCastle+"is");
+                    Castle();
+                break;
+        }
+    }
 }
