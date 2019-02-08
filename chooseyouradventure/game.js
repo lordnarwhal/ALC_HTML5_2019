@@ -34,37 +34,47 @@ var enemy = {
     
 }
 
-Game();
+function GetRandInt(max){
+    var randInt = Math.floor(Math.random()*Math.floor(max));
+    return randInt;
+}
 
+Game();
 function Game(){
-    document.write("legend of zebra intake air from untamed land copyright");
+    var wizardNames = ["Bethzar", "mordac", "grendor", "orco"];
+    
+    alert("legend of "+wizardNames[Math.floor(Math.random()*Math.floor(4))]);
+    
     var PlayerName = prompt("what is your name?");
-    alert("welcome to the land of hyreal copyright"+ PlayerName)
+    
+    alert("welcome to the land of hyreal copyright "+ PlayerName)
+    
     Prison();
     function Prison(){
-        var Prison = prompt("you wake up in a prison but you cant remember why /n - look around /n- back to sleep /n - talk to man").toLowerCase;
-        
+        var prison = prompt("you wake up in a prison but you cant remember why \n - look around \n- back to sleep \n - talk to man").toLowerCase();
+    
         if(prison == "look around" || prison == "look"){
-            var prisonLook = prompt("its a small dirty prison there is a bared window to the back a man sleeps to the right to the front is a locked iron door to the left is your bed theres a rug in the center of the room /n -wake man /n -move rug /n eat bugs");
+            var prisonLook = prompt("its a small dirty prison there is a bared window to the back a man sleeps to the right to the front is a locked iron door to the left is your bed theres a rug in the center of the room \n -wake man \n -move rug \n eat bugs");
         }
         else if(prison == "go back to sleep" || prison == "sleep"){
             alert("you sleep in your dirty bed like some pleb");
             var resume = confirm("do you want to continue?");
-            
-            if(resume){
+        }
+        if(resume){
                 Prison();
             }
-            else{
+        else{
                 alert("Game Over");
             }
-        }
+        
     }
     
     function Swamp(){
-        var swampEnv = prompt("this is a swamp. /n -follow path. /n -swim across.")
+        var swampEnv = prompt("this is a swamp. \n -follow path. \n -swim across.")
         
         if(swampEnv == "follow" || swampEnv == "follow path"){
-            var swampPath = prompt("you head towards a hut in the swamp. /n -enter hut. /n -burn it down")
+            var swampPath = prompt("you head towards a hut in the swamp. \n -enter hut. \n -burn it down")
+            }
             if( swampPath = "enter"){
                 alert("there is a witch by the fire")
             }
@@ -73,19 +83,21 @@ function Game(){
             alert("you hear screaming form inside you monster that couldve been a homeless orphan child whats wrong with you you werent even gunna check first the heck man")
         }
             else if(swampEnv == "swim"){
-        
+            }
             else{
                     alert("i dont understand "+swampEnv);
                     Swamp();
                 }
-            }
-        }
+            
+        
     }
             function blacksmith(){
-                alert("sup nerd whaat ya want."):
+                alert("sup nerd whaat ya want.");
                 
-                    var balcksmith(" /n - buy sword");
+                    var blacksmith = prompt(" \n - buy sword");
+                
                         if(blacksmith = "buy sword" && inventory.coins >= 100){
+                        }
                             var swordBuy = confirm("you sure you wanna buy this bud?");
                             if(swordBuy){
                                 inventory.sword ++;
@@ -94,7 +106,7 @@ function Game(){
                                 alert("you now have "+inventory.coins+" coins left");
                                 Blacksmith();
                             }
-                        }
+                        
             }
             
         
@@ -103,7 +115,7 @@ function Game(){
         
     
     
-    Function Castle(){
+function Castle(){
         var insideCastle = prompt("- upstairs - sownstairs - courtyard - balcony - look").toLowerCase();
         
         switch(insideCastle){
@@ -117,7 +129,7 @@ function Game(){
                 
                 break;
                 case "courtyard":
-                    alert("you go to the courtyard"):
+                    alert("you go to the courtyard");
                     Castle();
                 break;
                 case "balcony":
