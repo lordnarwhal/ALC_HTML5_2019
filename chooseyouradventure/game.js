@@ -47,7 +47,7 @@ function Game(){
     
     var PlayerName = prompt("what is your name?");
     
-    alert("welcome to the land of hyreal copyright "+ PlayerName)
+    alert("welcome to the land of DatBoi "+ PlayerName)
     
     Prison();
     function Prison(){
@@ -60,12 +60,16 @@ function Game(){
             alert("you sleep in your dirty bed like some pleb");
             var resume = confirm("do you want to continue?");
         }
+        else{
+            var resume = confirm("do you want to continue?");
+            //alert("Game Over");
+            }
         if(resume){
                 Prison();
             }
         else{
-                alert("Game Over");
-            }
+            alert("Game Over")
+        }
         
     }
     
@@ -142,4 +146,8 @@ function Castle(){
                 break;
         }
     }
+    
+    
+
 }
+
