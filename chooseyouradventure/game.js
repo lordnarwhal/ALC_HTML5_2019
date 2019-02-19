@@ -18,13 +18,17 @@ multiline comment
 
 //confirm("So your name is "+pc);
 
+var checkCoins = function(){
+    alert("Coins: "+player.inventory.coins)
+}
+
 var inventory = {
     sword:0,
     food:0,
     sheild:0,
     water:0,
     map:0,
-    
+    coins:100,
 }
 
 var enemy = {
@@ -53,6 +57,8 @@ function Game(){
     function Prison(){
         var prison = prompt("you wake up in a prison but you cant remember why \n - look around \n- back to sleep \n - talk to man").toLowerCase();
     
+        
+        
         if(prison == "look around" || prison == "look"){
             var prisonLook = prompt("its a small dirty prison there is a bared window to the back a man sleeps to the right to the front is a locked iron door to the left is your bed theres a rug in the center of the room \n -wake man \n -move rug \n eat bugs");
         }
@@ -60,6 +66,9 @@ function Game(){
             alert("you sleep in your dirty bed like some pleb");
             var resume = confirm("do you want to continue?");
         }
+        
+        //else if checkCoins();
+        
         else{
             var resume = confirm("do you want to continue?");
             //alert("Game Over");
