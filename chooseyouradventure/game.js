@@ -29,6 +29,7 @@ var inventory = {
     water:0,
     map:0,
     coins:100,
+    arrows:6,
 }
 
 var enemy = {
@@ -51,15 +52,22 @@ function Game(){
     
     var PlayerName = prompt("what is your name?");
     
+    while(!confirm("are you sure you want that name?")){
+        PlayerName=prompt("what name do you want?");
+    }
+    
     alert("welcome to the land of DatBoi "+ PlayerName)
     
     Prison();
     function Prison(){
         var prison = prompt("you wake up in a prison but you cant remember why \n - look around \n- back to sleep \n - talk to man").toLowerCase();
     
+        if(prison == "shop"){
+            Shop();
+        }
+            
         
-        
-        if(prison == "look around" || prison == "look"){
+        else if(prison == "look around" || prison == "look"){
             var prisonLook = prompt("its a small dirty prison there is a bared window to the back a man sleeps to the right to the front is a locked iron door to the left is your bed theres a rug in the center of the room \n -wake man \n -move rug \n eat bugs");
         }
         else if(prison == "go back to sleep" || prison == "sleep"){
@@ -156,7 +164,29 @@ function Castle(){
         }
     }
     
+function Shop(){
+    var arrowShop = 100;
+    var arrowPrice = 1;
     
-
+    
+    var purchase = prompt("aye yo what do you want mate? \n-Arrows:"+arrowShop).toLowerCase();
+    if(purchase == "arrows" || purchase == "arrow"){
+        var arrowCon = prompt("How many arrows you want?");
+			
+			while(!confirm("you sure you want "+arrowCon+" arrows, at "+arrowPrice+" an arrow?")){
+				arrowCon = prompt("How many arrows do ya want?");
+			}
+			
+			for(i = 1; i <= arrowCon; i++){
+				inventory.arrows ++;
+				console.log("You have "+inventory.arrows+" arrows");				
+			}
+			alert("You bought "+arrowCon+" arrows");
+			Shop();			
+		}
+else if(purchase == "exit"|| purchase == "leave"){
+    }
+    
+}
 }
 
