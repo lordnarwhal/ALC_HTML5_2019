@@ -28,7 +28,7 @@ var inventory = {
     sheild:0,
     water:0,
     map:0,
-    coins:100,
+    coins:1000,
     arrows:6,
 }
 
@@ -60,13 +60,20 @@ function Game(){
     
     Prison();
     function Prison(){
-        var prison = prompt("you wake up in a prison but you cant remember why \n - look around \n- back to sleep \n - talk to man").toLowerCase();
+        var prison = prompt("you wake up in a prison but you cant remember why \n-look around \n-back to sleep \n-talk to man \n-swamp \n-blacksmith \n-castle \n-shop").toLowerCase();
     
         if(prison == "shop"){
             Shop();
         }
-            
-        
+        else if(prison == "swamp"){
+            Swamp();
+        }
+        else if(prison == "blacksmith"){
+            blacksmith();
+        }
+        else if(prison == "castle"){
+            Castle();
+        }
         else if(prison == "look around" || prison == "look"){
             var prisonLook = prompt("its a small dirty prison there is a bared window to the back a man sleeps to the right to the front is a locked iron door to the left is your bed theres a rug in the center of the room \n -wake man \n -move rug \n eat bugs");
         }
@@ -91,20 +98,20 @@ function Game(){
     }
     
     function Swamp(){
-        var swampEnv = prompt("this is a swamp. \n -follow path. \n -swim across.")
+        var swampEnv = prompt("you arive at a nasty smelly swamp. \n -follow path.")
         
         if(swampEnv == "follow" || swampEnv == "follow path"){
-            var swampPath = prompt("you head towards a hut in the swamp. \n -enter hut. \n -burn it down")
+            var swampPath = prompt("you head towards a hut in the swamp. \n -enter hut. \n -burn it down").toLowerCase();
             }
-            if( swampPath = "enter"){
-                alert("there is a witch by the fire")
+            if(swampPath == "enter"){
+                alert("theres a homeless orphan child in there, he gets scared and jumps out the window and takes off");
+                Swamp();
             }
             
-        else if(swampPath = "burn it down"){
-            alert("you hear screaming form inside you monster that couldve been a homeless orphan child whats wrong with you you werent even gunna check first the heck man")
+        else if(swampPath == "burn it down"){
+            alert("you hear screaming form inside you monster that could've been a homeless orphan child whats wrong with you you werent even gunna check first, the heck man");
         }
-            else if(swampEnv == "swim"){
-            }
+            
             else{
                     alert("i dont understand "+swampEnv);
                     Swamp();
@@ -125,7 +132,7 @@ function Game(){
                                 alert("you got " +inventory.sword+" swords");
                                 inventory.coins = inventory.coins - 100;
                                 alert("you now have "+inventory.coins+" coins left");
-                                Blacksmith();
+                                Prison();
                             }
                         
             }
@@ -137,17 +144,17 @@ function Game(){
     
     
 function Castle(){
-        var insideCastle = prompt("- upstairs - sownstairs - courtyard - balcony - look").toLowerCase();
+        var insideCastle = prompt("\n-upstairs \n-downstairs \n-courtyard \n-balcony \n-prison  ").toLowerCase();
         
         switch(insideCastle){
                 case "upstairs" || "go upstairs":
-                var upstairs = prompt("you head to top floor of castle");
+                var upstairs = alert("you head to top floor of castle");
                 
                 Castle();
                 break;
                 case "downstairs":
                     alert("you go downstairs");
-                
+                    Castle();
                 break;
                 case "courtyard":
                     alert("you go to the courtyard");
@@ -157,8 +164,10 @@ function Castle(){
                     alert("you go to balcony");
                     Castle();
                 break;
+                case "prison":
+                    Prison();
                 default:
-                    alert("I dont know what "+insideCastle+"is");
+                    alert("I dont know what "+insideCastle+" is");
                     Castle();
                 break;
         }
@@ -173,18 +182,19 @@ function Shop(){
     if(purchase == "arrows" || purchase == "arrow"){
         var arrowCon = prompt("How many arrows you want?");
 			
-			while(!confirm("you sure you want "+arrowCon+" arrows, at "+arrowPrice+" an arrow?")){
+			while(!confirm("you sure you want "+arrowCon+" arrows, at "+arrowPrice+" gold an arrow?")){
 				arrowCon = prompt("How many arrows do ya want?");
 			}
 			
 			for(i = 1; i <= arrowCon; i++){
 				inventory.arrows ++;
 				console.log("You have "+inventory.arrows+" arrows");				
-			}
-			alert("You bought "+arrowCon+" arrows");
-			Shop();			
+			
+                alert("You bought "+arrowCon+" arrows");
+                Prison();			
 		}
-else if(purchase == "exit"|| purchase == "leave"){
+            //else if(purchase == "exit"|| purchase == "leave"){
+                //Prison();
     }
     
 }
