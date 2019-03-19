@@ -121,13 +121,13 @@ function Game(){
                 
                     var GunShop = prompt(" \n - buy laser rifle");
                 
-                        if(GunShop = "buy laser rifle" && inventory.coins >= 100){
+                        if(GunShop = "buy laser rifle" && inventory.money >= 100){
                         }
-                            var gunBuy = confirm("he trying to make sure this is what you want");
+                            var gunBuy = confirm("he is trying to make sure this is what you want");
                             if(gunBuy){
-                                inventory.gun ++;
-                                alert("you got " +inventory.gun+" guns");
-                                inventory.coins = inventory.money - 100;
+                                inventory.guns ++;
+                                alert("you got " +inventory.guns+" guns");
+                                inventory.money = inventory.money - 100;
                                 alert("you now have "+inventory.money+" dollars left you go back to the test room");
                                 Testroom();
                             }
@@ -141,7 +141,7 @@ function Game(){
     
     
 function Castle(){
-        var insideCastle = prompt("you seem to be in an emty store room there are different closets that might have something in them though\n-left \n-right \n-forward \n-test room  ").toLowerCase();
+        var insideCastle = prompt("you seem to be in an emty store room there are different closets that might have something left in them \n-left \n-right \n-forward \n-test room  ").toLowerCase();
         
         switch(insideCastle){
                 case "left" || "go left":
@@ -150,7 +150,7 @@ function Castle(){
                 Castle();
                 break;
                 case "right":
-                    alert("you go to the right closet there doesnt seem to be anything");
+                    alert("you go to the right closet there is some marks on the wall you cant understand them though it seems to be alien graffiti");
                     Castle();
                 break;
                 case "forward":
