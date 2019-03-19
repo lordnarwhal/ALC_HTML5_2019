@@ -21,10 +21,9 @@ var checkCoins = function(){
 }
 
 var inventory = {
-    balster:0,
+    guns:0,
     health_kit:0,
-    sheild:0,
-    map:0,
+    sheilds:0,
     money:1000,
     bullets:6,
 }
@@ -171,13 +170,12 @@ function Castle(){
 function Shop(){
     var ammoShop = 100;
     var ammoPrice = 1;
-    alert("you find yourself at some kind of shop they seem to sell ammo for laser guns")
     
-    var purchase = prompt("an alien greets you and points towards the ammo \n- buy Ammo:"+arrowShop).toLowerCase();
+    var purchase = prompt("an alien greets you and points towards the ammo \n- buy Ammo:"+ammoShop).toLowerCase();
     if(purchase == "buy ammo" || purchase == "ammo"){
         var ammoCon = prompt("it seems to be asking you how much ammo you want");
 			
-			while(!confirm("you sure you want "+ammoCon+" bullets, at "+ammoPrice+" dollars a bullet?")){
+			while(!confirm("you sure you want "+ammoCon+" bullets, at "+ammoPrice+" dollar a bullet?")){
 			}
 			
 			for(i = 1; i <= ammoCon; i++){
