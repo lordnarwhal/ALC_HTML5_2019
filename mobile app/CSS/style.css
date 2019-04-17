@@ -1,1 +1,47 @@
 /* Stylesheet for Mobile app */
+/*reset*/
+html,body,div,p,ul,ol,li,h1,h2,h3,h4,h5,h6
+{
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: cadetblue;
+}
+div#container {
+    width:1200px;
+    height:660px;
+    border:3px dashed orange;
+    background-color:blue;
+}
+header{
+    width:91.5%;
+    padding:50px;
+    background-color: red;
+}
+header h1{
+    color: white;
+    font-family: "Tahoma",sans-serif;
+    font-size: 2.5em;
+}
+div#content{
+    width: 100;
+    background-color: orange;
+}
+nav{
+background-color: yellow;
+    color: black;
+    
+    font-family: sans-serif;
+    font-size: 1.5em 
+}
+footer{
+    width:100%;
+    background-color: green;
+    height: 50px;
+}
+div#nothing{
+    background-color: purple;
+    width:110;
+    height: 100px;
+}
