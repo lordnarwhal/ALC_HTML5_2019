@@ -25,7 +25,7 @@ div#container {
 header{
     width:91.5%;
     padding:50px;
-    background-color: red;
+    background-color: skyblue;
 }
 
 header img#logo{
@@ -42,7 +42,7 @@ header h1{
 }
 div#content{
     width: 100%;
-    background-color: orange;
+    background-color: lightblue;
 }
 /*nav{
 background-color: yellow;
@@ -119,5 +119,5 @@ nav ul li a:hover{
 }
 
 .active {
-    background-color: #ffa20e;
+    background-color: blue;
 }
