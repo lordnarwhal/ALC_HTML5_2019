@@ -19,8 +19,12 @@ body {
 }
 div#container {
     width:100%;
-    border:3px dashed black;
-    background-color:blue;
+    /*border:3px dashed black;*/
+    background-color:whitesmoke;
+}
+
+ul#factslist{
+    list-style-type: circle;
 }
 header{
     width:91.5%;
@@ -37,12 +41,19 @@ header img#logo{
 header h1{
     text-align: center;
     color: white;
-    font-family: 'Nosifer', cursive;
+    font-family: 'Libre Baskerville', cursive;
     font-size: 2.5em;
 }
 div#content{
     width: 100%;
     background-color: lightblue;
+    text-align: center;
+}
+
+h1#technicalytrue{
+    padding: 50px;
+    text-align: center;
+    color: darkred;
 }
 /*nav{
 background-color: yellow;
@@ -96,7 +107,7 @@ nav ul li a:hover{
 
 
 .icon-bar{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -120,4 +131,29 @@ nav ul li a:hover{
 
 .active {
     background-color: blue;
+}
+
+div#narwahl_pics{
+    width: auto;
+    margin: auto;
+}
+
+figure.pictures{
+    width: 20%;
+    float: left;
+}
+
+figure.pictures img{
+    display: block;
+    width: auto;
+    margin: auto;
+    padding: 10px 0;
+}
+
+figure.pictures figcaption{
+    text-align: center;
+    color: black;
+    font-family: fantasy;
+    font-size: 24px;
+    
 }
