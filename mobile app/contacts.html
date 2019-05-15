@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        
+        legend, span, input, textarea {
+		display:block;
+		margin:auto;
+		text-align:center;
+		font-family:sans-serif;
+        color:darkblue;
+    }
+    
+    
+    </style>
     <meta charset="UTF-8">
     <meta name="veiwpoint" content="width=device-width, intitial-scale=1.0">
     <title>mobile app</title>
@@ -14,19 +26,52 @@
     <div id="container">
     <header id="head">
         <img src="img/applogo1.png" alt="app logo" id="logo">
-        <h1>contact us</h1>
+        <h1>Contact Us</h1>
         
         
         </header>
         <div id="content">
-        <h3>new items</h3>
-            <img src="" alt="product#1" id="product">
+            <br><br>
+        </div>
+        
+         <div id="contactstuff">
+             <br>
+        <form>
+            <fieldset>
+    
+            <legend>Contact Info:</legend>
+                
+                <span>First Name:</span>
+                <br>
+                <input type="text" name="firstname"><br>
             
+            <span>Last Name:</span>
+                <br>
+                <input type="text" name="lastname"><br>
+            
+            <span>Email Address:</span>
+                <br>
+                <input type="text" name="email"><br>
+                
+                <span>Message:</span>
+					 <br>			
+					 <textarea rows="10" cols="40" name="message">		
+					</textarea>
+					  
+					 <br><br>
+					  
+                    <input type="submit" value="Submit">
+            
+            </fieldset>
+            
+            </form>
+        
+        
         </div>
         
         <div class="icon-bar">
         <a href="index.html" ><i class="fa fa-home"></i></a>
-        <a href="search.html"><i class="fa fa-search"></i></a>
+        <a href="search.html"><i class="fa fa-question"></i></a>
         <a class="active" href="contacts.html"><i class="fa fa-envelope"></i></a>
         <a href="facts.html"><i class="fa fa-camera"></i></a>
         <a href="something.html"><i class="fa fa-book"></i></a>
@@ -34,7 +79,7 @@
         
         </div>
         
-        
+       
         
         
       <!--  <nav id="nav">
